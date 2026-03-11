@@ -1,141 +1,141 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
-const whatsappLink = "https://wa.me/51958322241?text=Hola%20STS,%20vengo%20de%20la%20web%20y%20deseo%20una%20cotización";
 ---
 
-<Layout title="STS S.A.C. | Especialistas en Llantas Industriales y Agrícolas">
-  
-  <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 py-4">
-    <div class="container mx-auto px-6 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <img src="/logo-sts.png" alt="STS Logo" class="h-10 w-auto" />
-        <span class="font-bold text-xl tracking-tighter text-blue-900">STS S.A.C.</span>
-      </div>
-      <div class="hidden md:flex gap-8 font-medium">
-        <a href="#inicio" class="hover:text-red-600 transition">Inicio</a>
-        <a href="#sectores" class="hover:text-red-600 transition">Sectores</a>
-        <a href="#catalogo" class="hover:text-red-600 transition">Catálogo</a>
-        <a href="#nosotros" class="hover:text-red-600 transition">Nosotros</a>
-      </div>
-      <a href={whatsappLink} class="bg-red-600 text-white px-5 py-2 rounded-md font-bold text-sm hover:bg-red-700 transition">
-        COTIZAR
-      </a>
-    </div>
-  </nav>
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>STS S.A.C. | Especialistas en Llantas Industriales y Agrícolas</title>
+</head>
+<body class="font-sans antialiased text-slate-900">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="/logo-sts.png" alt="STS Logo" class="h-10 w-auto">
+                <span class="font-bold text-xl tracking-tighter text-blue-900">STS S.A.C.</span>
+            </div>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="#inicio" class="hover:text-red-600 transition">Inicio</a>
+                <a href="#sectores" class="hover:text-red-600 transition">Sectores</a>
+                <a href="#catalogo" class="hover:text-red-600 transition">Catálogo</a>
+                <a href="#nosotros" class="hover:text-red-600 transition">Nosotros</a>
+            </div>
+            <a href="https://wa.me/51958322241?text=Hola%20STS,%20vengo%20de%20la%20web" class="bg-red-600 text-white px-5 py-2 rounded-md font-bold text-sm hover:bg-red-700 transition">COTIZAR</a>
+        </div>
+    </nav>
 
-  <section id="inicio" class="relative h-screen flex items-center pt-20 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1586191582151-f7377395ef62?auto=format&fit=crop&q=80&w=2000" 
-           class="w-full h-full object-cover brightness-[0.3]" alt="Maquinaria pesada">
-    </div>
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="max-w-3xl">
-        <span class="text-red-500 font-bold tracking-widest uppercase text-sm mb-4 block underline decoration-2 underline-offset-8">Confianza y Rendimiento</span>
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-          Llantas para los terrenos más <span class="text-red-600">exigentes.</span>
-        </h1>
-        <p class="text-xl text-gray-300 mb-10 leading-relaxed">
-          Especialistas en sectores Agrícola, Industrial, OTR y Transporte Pesado. 
-          Asesoría profesional y despacho a nivel nacional desde Lima y Cañete.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#catalogo" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-center hover:bg-gray-100 transition">Ver Catálogo PDF</a>
-          <a href={whatsappLink} class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-center hover:bg-red-700 transition">Asesoría Inmediata</a>
+    <section id="inicio" class="relative h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="/hero-sts.jpg" 
+                class="w-full h-full object-cover brightness-[0.4]" 
+                alt="Maquinaria pesada STS"
+            >
         </div>
-      </div>
-    </div>
-  </section>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <span class="text-red-500 font-bold tracking-widest uppercase text-sm mb-4 block underline decoration-2 underline-offset-8">Confianza y Rendimiento</span>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+                    Llantas para los terrenos más <span class="text-red-600">exigentes.</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed">
+                    Especialistas en sectores Agrícola, Industrial, OTR y Transporte Pesado. Asesoría profesional y despacho a nivel nacional.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#catalogo" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-center hover:bg-gray-100 transition">Ver Catálogo PDF</a>
+                    <a href="https://wa.me/51958322241" class="bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-center hover:bg-red-700 transition">Asesoría Inmediata</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="sectores" class="py-24 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Soluciones por Sector</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Contamos con neumáticos diseñados para maximizar la productividad y eficiencia de su operación.</p>
-      </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="p-8 border border-gray-100 rounded-2xl shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition duration-300">
-          <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">A</div>
-          <h3 class="text-xl font-bold mb-3">Agrícola</h3>
-          <p class="text-gray-600 text-sm italic">Tractores, cosechadoras y maquinaria de campo.</p>
+    <section id="sectores" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Soluciones por Sector</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Contamos con neumáticos diseñados para maximizar la productividad de su operación.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">A</div>
+                    <h3 class="text-xl font-bold mb-3">Agrícola</h3>
+                    <p class="text-gray-600 text-sm italic">Tractores y maquinaria de campo.</p>
+                </div>
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-xl hover:-translate-y-2 transition duration-300 bg-blue-900 text-white">
+                    <div class="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">I</div>
+                    <h3 class="text-xl font-bold mb-3">Industrial & OTR</h3>
+                    <p class="text-blue-100 text-sm italic">Minería y construcción.</p>
+                </div>
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-xl hover:-translate-y-2 transition duration-300">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">C</div>
+                    <h3 class="text-xl font-bold mb-3">Camión & Bus</h3>
+                    <p class="text-gray-600 text-sm italic">Transporte de carga pesada.</p>
+                </div>
+            </div>
         </div>
-        <div class="p-8 border border-gray-100 rounded-2xl shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition duration-300 bg-blue-900 text-white">
-          <div class="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">I</div>
-          <h3 class="text-xl font-bold mb-3 text-white">Industrial & OTR</h3>
-          <p class="text-blue-100 text-sm italic">Minería, construcción y movimiento de tierras.</p>
-        </div>
-        <div class="p-8 border border-gray-100 rounded-2xl shadow-xl shadow-gray-200/50 hover:-translate-y-2 transition duration-300">
-          <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">C</div>
-          <h3 class="text-xl font-bold mb-3">Camión & Bus</h3>
-          <p class="text-gray-600 text-sm italic">Transporte de carga pesada y flotas logísticas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="py-12 bg-gray-50 overflow-hidden border-y border-gray-200">
-    <div class="container mx-auto px-6">
-      <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Distribuidores de Marcas Globales</p>
-      <div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition duration-500">
-        <span class="text-2xl font-black">MICHELIN</span>
-        <span class="text-2xl font-black">BRIDGESTONE</span>
-        <span class="text-2xl font-black">GOODYEAR</span>
-        <span class="text-2xl font-black">TRIANGLE</span>
-        <span class="text-2xl font-black">BKT</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="catalogo" class="py-24 bg-blue-950 text-white relative">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-      <div class="flex-1">
-        <h2 class="text-4xl font-bold mb-6 italic">¿Busca especificaciones técnicas?</h2>
-        <p class="text-blue-200 text-lg mb-8 leading-relaxed">
-          Nuestro portafolio actualizado 2024 incluye todas las medidas, índices de carga y diseños de banda de rodamiento disponibles.
-        </p>
-        <ul class="mb-10 space-y-4">
-          <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Precios competitivos por volumen</li>
-          <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Garantía de fábrica</li>
-          <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Asesoría en sitio</li>
-        </ul>
-        <a href="/catalogo-sts.pdf" class="inline-block bg-white text-blue-900 font-bold px-10 py-4 rounded-full shadow-lg hover:scale-105 transition transform">
-          DESCARGAR CATÁLOGO (PDF)
-        </a>
-      </div>
-      <div class="flex-1">
-        <img src="https://images.unsplash.com/photo-1543632940-025586940087?q=80&w=1000" class="rounded-3xl shadow-2xl border-4 border-white/10" alt="Almacén de llantas">
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-white pt-20 pb-10 border-t border-gray-100">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-        <div>
-          <h4 class="font-black text-2xl text-blue-900 mb-6 uppercase">STS S.A.C.</h4>
-          <p class="text-gray-500">Aliados estratégicos en el sector, garantizando profesionalismo, ética y moral en cada venta.</p>
+    <section class="py-12 bg-gray-50 border-y border-gray-200">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Distribuidores de Marcas Globales</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition duration-500">
+                <span class="text-2xl font-black">MICHELIN</span>
+                <span class="text-2xl font-black">BRIDGESTONE</span>
+                <span class="text-2xl font-black">GOODYEAR</span>
+                <span class="text-2xl font-black">TRIANGLE</span>
+                <span class="text-2xl font-black">BKT</span>
+            </div>
         </div>
-        <div>
-          <h4 class="font-bold mb-6">Ubicaciones</h4>
-          <p class="text-gray-500 mb-2">📍 <strong>Cañete:</strong> Jr. Garro 280, San Vicente.</p>
-          <p class="text-gray-500">📍 <strong>Lima:</strong> Atención y despacho a nivel nacional.</p>
-        </div>
-        <div>
-          <h4 class="font-bold mb-6">Contacto Directo</h4>
-          <p class="text-gray-500">📧 ventas@stsllantas.com</p>
-          <p class="text-gray-500">📞 958 322 241 / 966 022 790</p>
-        </div>
-      </div>
-      <div class="text-center text-gray-400 text-sm border-t border-gray-50 pt-10">
-        &copy; {new Date().getFullYear()} STS S.A.C. - Todos los derechos reservados.
-      </div>
-    </div>
-  </footer>
+    </section>
 
-</Layout>
-<a href={whatsappLink} class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-transform hover:scale-110 z-[100] md:hidden">
-  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.845-1.588-5.946 0-6.556 5.332-11.888 11.888-11.888 3.176 0 6.161 1.237 8.404 3.481s3.481 5.228 3.481 8.405c0 6.556-5.331 11.888-11.888 11.888-2.022 0-4.005-.514-5.753-1.487l-6.231 1.698zm6.103-4.494c1.605.953 3.484 1.458 5.405 1.458 5.835 0 10.581-4.746 10.581-10.582 0-2.827-1.1-5.485-3.098-7.482s-4.653-3.098-7.483-3.098c-5.835 0-10.582 4.746-10.582 10.582 0 1.865.489 3.682 1.417 5.289l-1.076 3.93 4.028-1.097z"/>
-  </svg>
-</a>
+    <section id="catalogo" class="py-24 bg-blue-950 text-white relative">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1">
+                <h2 class="text-4xl font-bold mb-6 italic">¿Busca especificaciones técnicas?</h2>
+                <p class="text-blue-200 text-lg mb-8 leading-relaxed">
+                    Nuestro portafolio actualizado incluye todas las medidas, índices de carga y diseños de banda de rodamiento.
+                </p>
+                <ul class="mb-10 space-y-4">
+                    <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Precios competitivos</li>
+                    <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Garantía de fábrica</li>
+                    <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Despacho nacional</li>
+                </ul>
+                <a href="/catalogo-sts.pdf" class="inline-block bg-white text-blue-900 font-bold px-10 py-4 rounded-full shadow-lg hover:scale-105 transition transform">
+                    DESCARGAR CATÁLOGO (PDF)
+                </a>
+            </div>
+            <div class="flex-1">
+                <img src="/almacen-sts.jpg" class="rounded-3xl shadow-2xl border-4 border-white/10 w-full h-auto" alt="Almacén STS">
+            </div>
+        </div>
+    </section>
+
+    <footer id="nosotros" class="bg-white pt-20 pb-10 border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div>
+                    <h4 class="font-black text-2xl text-blue-900 mb-6 uppercase">STS S.A.C.</h4>
+                    <p class="text-gray-500">Aliados estratégicos en el sector, garantizando profesionalismo, ética y moral en cada venta.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-blue-900">Ubicaciones</h4>
+                    <p class="text-gray-500 mb-2">📍 <strong>Cañete:</strong> Jr. Garro 280, San Vicente.</p>
+                    <p class="text-gray-500">📍 <strong>Lima:</strong> Atención y despacho a nivel nacional.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-blue-900">Contacto Directo</h4>
+                    <p class="text-gray-500">📧 ventas@stsllantas.com</p>
+                    <p class="text-gray-500">📞 958 322 241 / 966 022 790</p>
+                    <p class="text-gray-500">🏢 RUC: 20606471853</p>
+                </div>
+            </div>
+            <div class="text-center text-gray-400 text-sm border-t border-gray-50 pt-10">
+                &copy; 2026 STS S.A.C. - Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
