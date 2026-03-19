@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { Image } from 'astro:assets';
 
 // Importamos las imágenes desde la nueva ubicación en assets
+import heroSts from '../assets/hero-sts.jpg';
 import imgAgricola from '../assets/sector-agricola.jpg';
 import imgIndustrial from '../assets/sector-industrial.jpg';
 import imgMontacarga from '../assets/sector-montacarga.jpg';
@@ -11,6 +12,7 @@ import imgMineria from '../assets/sector-mineria.jpg';
 import imgTransporte from '../assets/sector-transporte.jpg';
 import imgCamioneta from '../assets/sector-camioneta.jpg';
 import imgAuto from '../assets/sector-auto.jpg';
+import almacenSts from '../assets/almacen-sts.jpg';
 ---
 
 <!DOCTYPE html>
@@ -155,11 +157,17 @@ import imgAuto from '../assets/sector-auto.jpg';
 
 <section id="inicio" class="relative h-screen flex items-center pt-20 overflow-hidden">
     <div class="absolute inset-0 z-0">
-        <img 
-            src="/hero-sts.jpg" 
-            class="w-full h-full object-cover brightness-[0.4]" 
-            alt="Maquinaria pesada STS"
-        >
+        <Image 
+            src={heroSts} 
+            alt="Maquinaria pesada STS" 
+            width={1920} 
+            height={1080}
+            format="webp"
+            quality={80}
+            loading="eager" 
+            fetchpriority="high"
+            class="w-full h-full object-cover brightness-[0.4]"
+        />
     </div>
     <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-3xl">
@@ -352,18 +360,38 @@ import imgAuto from '../assets/sector-auto.jpg';
 
 <section id="catalogo" class="py-24 bg-white relative overflow-hidden">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12 relative z-10">
-        <div class="flex-1">
+        <div class="flex-1 text-center md:text-left">
             <h2 class="text-3xl md:text-5xl font-black text-blue-900 mb-8 uppercase tracking-tighter leading-tight">
-                CONTAMOS CON GRAN <span class="text-gray-500">VARIEDAD DE MODELOS Y MEDIDAS</span> DE LLANTAS PARA DIFERENTES TIPOS DE <span class="text-gray-500">MAQUINARIAS Y VEHÍCULOS</span>
+                Contamos con gran <span class="text-gray-400">variedad de modelos y medidas</span> de llantas para diferentes tipos de <span class="text-gray-400">maquinarias y vehículos</span>
             </h2>
-            <div class="w-24 h-1.5 bg-blue-900 mb-10"></div>
-            <a href="/catalogo-sts.pdf" class="inline-block bg-blue-900 text-white font-black px-10 py-4 rounded-full shadow-xl hover:bg-gray-800 transition-all transform hover:-translate-y-1 uppercase tracking-widest text-sm">
+            <div class="w-24 h-1.5 bg-blue-900 mb-10 mx-auto md:ml-0"></div>
+            
+            <a href="/catalogo-sts.pdf" 
+               target="_blank" 
+               class="inline-block bg-blue-900 text-white font-black px-10 py-4 rounded-full shadow-xl hover:bg-red-600 transition-all transform hover:-translate-y-1 uppercase tracking-widest text-sm">
                 Descargar Catálogo (PDF)
             </a>
         </div>
-        <div class="flex-1 relative">
-            <div class="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-gray-100 rounded-tr-3xl z-0"></div>
-            <img src="/almacen-sts.jpg" class="relative z-10 rounded-[2.5rem] shadow-2xl border border-gray-100 w-full h-[450px] object-cover" alt="Almacén STS">
+
+        <div class="flex-1 relative w-full">
+            <div class="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-gray-100 rounded-tr-[3rem] z-0 hidden md:block"></div>
+            <div class="absolute -bottom-4 -left-4 w-24 h-24 border-b-4 border-l-4 border-red-50 rounded-bl-[3rem] z-0 hidden md:block"></div>
+            
+            <div class="relative z-10 overflow-hidden rounded-[2.5rem] shadow-2xl border border-gray-100">
+                <Image 
+                    src={almacenSts} 
+                    alt="Stock de llantas en el almacén de South Tires Solutions" 
+                    width={800} 
+                    height={600}
+                    format="webp"
+                    quality="mid"
+                    class="w-full h-[300px] md:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                />
+            </div>
+
+            <div class="absolute top-8 left-8 z-20 bg-red-600 text-white px-4 py-2 rounded-lg font-bold text-xs uppercase tracking-tighter shadow-lg">
+                Stock Permanente
+            </div>
         </div>
     </div>
 </section>
