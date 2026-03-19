@@ -1,5 +1,16 @@
 ---
 import '../styles/global.css';
+import { Image } from 'astro:assets';
+
+// Importamos las imágenes desde la nueva ubicación en assets
+import imgAgricola from '../assets/sector-agricola.jpg';
+import imgIndustrial from '../assets/sector-industrial.jpg';
+import imgMontacarga from '../assets/sector-montacarga.jpg';
+import imgConstruccion from '../assets/sector-construccion.jpg';
+import imgMineria from '../assets/sector-mineria.jpg';
+import imgTransporte from '../assets/sector-transporte.jpg';
+import imgCamioneta from '../assets/sector-camioneta.jpg';
+import imgAuto from '../assets/sector-auto.jpg';
 ---
 
 <!DOCTYPE html>
@@ -198,92 +209,39 @@ import '../styles/global.css';
                 LLANTAS PARA CADA INDUSTRIA Y TERRENO.
             </h2>
             <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
-            <p class="text-gray-500 max-w-3xl mx-auto text-lg font-medium">
-                
-            </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div class="group overflow-hidden rounded-2xl shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 bg-white">
-                <div class="h-48 overflow-hidden">
-                    <img src="/sector-agricola.jpg" alt="Agrícola" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            {/* Usamos un array para renderizar las tarjetas de forma limpia */}
+            {[
+                { src: imgAgricola, title: "Agrícola", desc: "Tracción superior para tractores." },
+                { src: imgIndustrial, title: "Industrial", desc: "Equipos de manipulación de carga." },
+                { src: imgMontacarga, title: "Montacarga", desc: "Llantas sólidas y neumáticas." },
+                { src: imgConstruccion, title: "Construcción", desc: "Resistencia para retroexcavadoras." },
+                { src: imgMineria, title: "Minería", desc: "Llantas OTR para condiciones extremas." },
+                { src: imgTransporte, title: "Camión", desc: "Máximo kilometraje en carretera." },
+                { src: imgCamioneta, title: "Camioneta", desc: "Llantas AT/MT para todo terreno." },
+                { src: imgAuto, title: "Auto", desc: "Seguridad y confort urbano." }
+            ].map((sector) => (
+                <div class="group overflow-hidden rounded-2xl shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 bg-white">
+                    <div class="h-48 overflow-hidden">
+                        <Image 
+                            src={sector.src} 
+                            alt={`Sector ${sector.title}`}
+                            width={600}
+                            height={400}
+                            format="webp"
+                            quality="mid"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">{sector.title}</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">{sector.desc}</p>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">Agrícola</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Tracción superior para tractores y cosechadoras.</p>
-                </div>
-            </div>
-
-            <div class="group overflow-hidden rounded-2xl shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 bg-white">
-                <div class="h-48 overflow-hidden">
-                    <img src="/sector-industrial.jpg" alt="Industrial" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">Industrial</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Equipos de manipulación de carga pesada.</p>
-                </div>
-            </div>
-
-            <div class="group overflow-hidden rounded-2xl shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 bg-white">
-                <div class="h-48 overflow-hidden">
-                    <img src="/sector-montacarga.jpg" alt="Montacargas" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">Montacarga</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Llantas sólidas y neumáticas de alta durabilidad.</p>
-                </div>
-            </div>
-
-            <div class="group overflow-hidden rounded-2xl shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 bg-white">
-                <div class="h-48 overflow-hidden">
-                    <img src="/sector-construccion.jpg" alt="Construcción" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">Construcción</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Resistencia para retroexcavadoras y mixers.</p>
-                </div>
-            </div>
-
-             <div class="group overflow-hidden rounded-2xl shadow-sm border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 bg-white">
-                <div class="h-48 overflow-hidden">
-                <img src="/sector-mineria.jpg" alt="Minería" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                </div>
-                <div class="p-6">
-                <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">Minería</h3>
-                <p class="text-gray-500 text-xs leading-relaxed font-medium">Llantas OTR para condiciones extremas de tajo abierto.</p>
-                </div>
-            </div>
-
-            <div class="group overflow-hidden rounded-2xl shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 bg-white">
-                <div class="h-48 overflow-hidden">
-                    <img src="/sector-transporte.jpg" alt="Camión" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">Camión</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Máximo kilometraje para transporte de carga.</p>
-                </div>
-            </div>
-
-            <div class="group overflow-hidden rounded-2xl shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 bg-white">
-                <div class="h-48 overflow-hidden">
-                    <img src="/sector-camioneta.jpg" alt="Camioneta" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">Camioneta</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Llantas AT/MT para todo tipo de terreno.</p>
-                </div>
-            </div>
-
-            <div class="group overflow-hidden rounded-2xl shadow-md border border-gray-100 hover:shadow-2xl transition-all duration-500 bg-white">
-                <div class="h-48 overflow-hidden">
-                    <img src="/sector-auto.jpg" alt="Auto" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-black text-blue-900 mb-2 uppercase tracking-tighter">Auto</h3>
-                    <p class="text-gray-500 text-xs leading-relaxed">Seguridad y confort en la conducción urbana.</p>
-                </div>
-            </div>
+            ))}
 
         </div>
     </div>
