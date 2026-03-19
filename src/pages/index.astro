@@ -103,7 +103,7 @@ import '../styles/global.css';
         <div class="hidden md:flex gap-8 font-bold text-[11px] tracking-widest text-blue-900">
             <a href="#inicio" class="hover:text-red-600 transition">INICIO</a>
             <a href="#sectores" class="hover:text-red-600 transition">PRODUCTOS</a>
-            <a href="#sectores" class="hover:text-red-600 transition">SERVICIOS</a>
+            <a href="#servicios" class="hover:text-red-600 transition">SERVICIOS</a>
             <a href="#catalogo" class="hover:text-red-600 transition">CATÁLOGO</a>
             <a href="#blog" class="hover:text-red-600 transition">BLOG</a>
             <a href="#nosotros" class="hover:text-red-600 transition">NOSOTROS</a>            
@@ -271,7 +271,8 @@ import '../styles/global.css';
       </h2>
       <div class="w-16 h-1 bg-blue-900 mx-auto mb-6"></div>
       <p class="text-gray-500 text-sm font-bold max-w-2xl mx-auto uppercase tracking-[0.3em]">
-        Excelencia operativa en cada solución
+        Los mejores servicios a disposición
+
       </p>
     </div>
 
@@ -365,29 +366,69 @@ import '../styles/global.css';
   </div>
 </section>
 
-<section id="catalogo" class="py-24 bg-blue-950 text-white relative">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+<section id="catalogo" class="py-24 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12 relative z-10">
+        
         <div class="flex-1">
-            <h2 class="text-4xl font-bold mb-6 italic">¿Busca especificaciones técnicas?</h2>
-            <p class="text-blue-200 text-lg mb-8 leading-relaxed">
-                Nuestro portafolio actualizado incluye todas las medidas, índices de carga y diseños de banda de rodamiento.
-            </p>
-            <ul class="mb-10 space-y-4">
-                <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Precios competitivos</li>
-                <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Garantía de fábrica</li>
-                <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✓</span> Despacho nacional</li>
-            </ul>
-            <a href="/catalogo-sts.pdf" class="inline-block bg-white text-blue-900 font-bold px-10 py-4 rounded-full shadow-lg hover:scale-105 transition transform">
-                DESCARGAR CATÁLOGO (PDF)
+            <h2 class="text-3xl md:text-5xl font-black text-blue-900 mb-8 uppercase tracking-tighter leading-tight">
+                CONTAMOS CON GRAN <span class="text-gray-500">VARIEDAD DE MODELOS Y MEDIDAS</span> DE LLANTAS PARA DIFERENTES TIPOS DE <span class="text-gray-500">MAQUINARIAS Y VEHÍCULOS</span>
+            </h2>
+            
+            <div class="w-24 h-1.5 bg-blue-900 mb-10"></div>
+            
+            <a href="/catalogo-sts.pdf" class="inline-block bg-blue-900 text-white font-black px-10 py-4 rounded-full shadow-xl hover:bg-gray-800 transition-all transform hover:-translate-y-1 uppercase tracking-widest text-sm">
+                Descargar Catálogo (PDF)
             </a>
         </div>
-        <div class="flex-1">
-            <img src="/almacen-sts.jpg" class="rounded-3xl shadow-2xl border-4 border-white/10 w-full h-auto" alt="Almacén STS">
+
+        <div class="flex-1 relative">
+            <div class="absolute -top-4 -right-4 w-24 h-24 border-t-4 border-r-4 border-gray-100 rounded-tr-3xl z-0"></div>
+            
+            <img 
+                src="/almacen-sts.jpg" 
+                class="relative z-10 rounded-[2.5rem] shadow-2xl border border-gray-100 w-full h-[450px] object-cover" 
+                alt="Almacén STS"
+            >
         </div>
+        
     </div>
 </section>
 
-<section id="contacto" class="w-full bg-blue-900 py-24 overflow-hidden relative">
+<section id="blog" class="py-24 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-12 relative z-10">
+        
+        <div class="flex-1">
+            <h2 class="text-3xl md:text-5xl font-black text-blue-900 mb-6 uppercase tracking-tighter leading-tight">
+                ¡NUNCA DEJAMOS DE <span class="text-gray-500">APRENDER!</span>
+            </h2>
+            
+            <div class="w-24 h-1.5 bg-blue-900 mb-8"></div>
+
+            <p class="text-gray-600 text-lg mb-10 leading-relaxed font-medium">
+                Nuestro conocimiento es incompleto, inconcluso y siempre tenemos que aprender de manera permanente, por ello hemos creado un blog en el que encontrará información útil, consejos y recomendaciones para un adecuado mantenimiento, cuidado y cambio de sus neumáticos.
+            </p>
+            
+            <a href="/blog" class="inline-block bg-blue-900 text-white font-black px-10 py-4 rounded-full shadow-xl hover:bg-gray-800 transition-all transform hover:-translate-y-1 uppercase tracking-widest text-sm">
+                Visitar el Blog
+            </a>
+        </div>
+
+        <div class="flex-1 relative">
+            <div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-gray-100 rounded-tl-3xl z-0"></div>
+            
+            <img 
+                src="/blog.jpg" 
+                class="relative z-10 rounded-[2.5rem] shadow-2xl border border-gray-100 w-full h-[450px] object-cover" 
+                alt="Blog STS Llantas"
+            >
+        </div>
+        
+    </div>
+</section>
+
+
+
+<section id="contacto" class="w-full bg-blue-950 py-24 overflow-hidden relative">
     
     <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('/pattern-tyres.png');"></div>
 
@@ -396,12 +437,13 @@ import '../styles/global.css';
 
             <div class="lg:col-span-5 space-y-10 order-2 lg:order-1">
                 <div class="space-y-4">
-                    <h3 class="text-xs font-black text-red-500 uppercase tracking-[0.4em]">Atención Directa</h3>
-                    <h2 class="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none">
-                        Contacto
+                    <h3 class="text-xs font-black text-red-500 uppercase tracking-[0.4em]"></h3>
+                    <h2 class="text-5xl md:text-6xl font-black text-white tracking-tighter leading-none">
+                        Contáctanos
                     </h2>
                     <p class="text-blue-100/60 text-lg font-medium max-w-sm border-l-2 border-red-600 pl-4">
-                        Ponte en contacto con nosotros para mayor información técnica.
+                        Nuestros asesores estarán atentos a dar respuesta a sus consultas en el menor tiempo posible. 
+
                     </p>
                 </div>
 
@@ -413,7 +455,7 @@ import '../styles/global.css';
                             </svg>
                         </span>
                         <div class="flex flex-col">
-                            <span class="text-[10px] uppercase font-bold text-red-500 tracking-widest">Línea Principal</span>
+                            <span class="text-[10px] uppercase font-bold text-red-500 tracking-widest">Canales de Atencion</span>
                             <span class="text-white font-black text-xl tracking-tight">958 322 241</span>
                         </div>
                     </a>
@@ -467,11 +509,12 @@ import '../styles/global.css';
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4 tracking-tight">
-                    Confianza que se mueve con usted
+                    Nuestros clientes opinan
                 </h2>
                 <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
                 <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-                    Lo que nuestros clientes en los sectores minero, agrícola e industrial dicen sobre South Tires Solutions SAC.
+                    Gracias por brindarnos su confianza y recomendando nuestro trabajo. Para nosotros es muy importante sus comentarios, nos motivan a continuar esforzándonos para mejorar cada día.
+
                 </p>
             </div>
 
